@@ -18,3 +18,14 @@ spring:
       pool:
         # 连接池最大连接数(使用负数表示没有限制), 默认0
         max-active: 100
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+#    host: 172.80.80.6
+    host: localhost
+    virtual-host: /
+order:
+  fanout:
+    exchange: order.fanout.exchange
+    queue: order.fanout.queue
